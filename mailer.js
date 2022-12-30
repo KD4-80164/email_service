@@ -24,7 +24,7 @@ console.log("ran 1 time");
 
 async function mailSender(email) {
 
-  const htmlData=`
+  const htmlData = `
   <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,33 +50,22 @@ async function mailSender(email) {
     background-color: rgb(217, 244, 244);
 " class="hdr"><img class = "clg-logo" src="GECLogoFinal.png" alt="clg-img"/><div style="font-size: 1.3rem;
 font-weight: 600;" class="opp-text">Opportuity from Gec Raipur</div></div>
-    <p style="text-align: left" class="name">Hi ${email.name},</p>
-    <p style="text-align: left" class="name">Hi ${email.class},</p>
+    <p style="text-align: left" class="name">Dear ${email.name},</p>
+    
     <p class="firts-para"> 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      We would like to present to you a new job opportunity at 
+      ${email.company}. We think you may find it interesting.
     </p>
     <p class="second-para">
-        <span class="det-head"><b>Details for opening:</b></span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam,in culpa qui officia deserunt mollit anim id est laborum.
+       ${email.company} have a job opening for ${email.position}, and according to your skills and experience, I think you may be a good fit. 
     </p>
-    <p>Hera Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        <ul><li>position 1</li><li>position 2</li><li>position 3</li><li>position 4</li></ul>
-    </p>
-    <p id="demo">Best Wishes,<br>
-        Sender Name <script>text</script>  </p>
+    <p> As a ${email.position}, you would be hired ${email.job_description} It will be fully ${email.location}
+    If you are interested to learn more about this opportunity, please check it out on our career site ${email.link}.</p>
+    <p id="demo">Best Wishes,<br>  </p>
     <footer>
         <div class="rounded-social-buttons">
                           cfc@gmail.com
-                          <!-- <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                          <a class=${"social-button linkedin"} href=${"https://www.linkedin.com/"}  target="_blank"><i class="fab fa-linkedin"></i></a> -->
+                          
                       </div>
       </footer>
     </div>
@@ -88,7 +77,7 @@ font-weight: 600;" class="opp-text">Opportuity from Gec Raipur</div></div>
 
   </body>
 </html>
-  `;
+  `
 
 
   // const htmlData = fs.readFileSync(filePath,{encoding:"utf-8"},function(err,html){
